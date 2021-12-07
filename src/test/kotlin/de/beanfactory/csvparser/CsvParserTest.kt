@@ -41,8 +41,11 @@ Large/ small screen devices";2015
         Assertions.assertEquals(11, result.size)
 
         Assertions.assertEquals("mrBranche", result[0].fields[0].value)
+        Assertions.assertEquals("1", result[0].fields[0].name)
         Assertions.assertEquals("mrBeschrTechn", result[0].fields[1].value)
+        Assertions.assertEquals("2", result[0].fields[1].name)
         Assertions.assertEquals("mrStartJahr", result[0].fields[2].value)
+        Assertions.assertEquals("3", result[0].fields[2].name)
 
         Assertions.assertEquals("Automotive", result[1].fields[0].value)
         Assertions.assertEquals("Kanban, Jira, Confluence", result[1].fields[1].value)
@@ -62,6 +65,7 @@ Large/ small screen devices";2015
         Assertions.assertEquals("2015", result[9].fields[2].value)
 
         Assertions.assertEquals("Telekommunikation", result[10].fields[0].value)
+        Assertions.assertEquals("1", result[10].fields[0].name)
         Assertions.assertEquals(
             """
             Scrum
@@ -72,7 +76,9 @@ Large/ small screen devices";2015
             Large/ small screen devices""".trimIndent(),
             result[10].fields[1].value
         )
+        Assertions.assertEquals("2", result[10].fields[1].name)
         Assertions.assertEquals("2015            ", result[10].fields[2].value)
+        Assertions.assertEquals("3", result[10].fields[2].name)
     }
 
 

@@ -191,7 +191,7 @@ class CsvParser {
         }
 
         // end of field at end of file
-        return ParseResult(pos, Field("", value))
+        return ParseResult(pos, Field(name, value))
     }
 
     private fun nextFieldName(): String {
