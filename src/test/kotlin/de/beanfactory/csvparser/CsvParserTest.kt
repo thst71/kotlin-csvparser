@@ -210,7 +210,7 @@ Large/ small screen devices";2015
         intelliJ
         Protractor
         GIT\"
-        Jira
+        Jira""
         Large/ small screen devices";2015""".trimIndent()
 
     @Test
@@ -226,7 +226,7 @@ Large/ small screen devices";2015
             intelliJ
             Protractor
             GIT"
-            Jira
+            Jira"
             Large/ small screen devices""".trimIndent(),
             result[0].fields[1].value
         )
@@ -237,7 +237,7 @@ Large/ small screen devices";2015
         Telekommunikation;Scrum\
         intelliJ\
         Protractor\
-        GIT\"\
+        GIT\" ""\
         Jira\
         Large/ small screen devices\;;2015""".trimIndent()
 
@@ -253,7 +253,7 @@ Large/ small screen devices";2015
             Scrum
             intelliJ
             Protractor
-            GIT"
+            GIT" "
             Jira
             Large/ small screen devices;""".trimIndent(),
             result[0].fields[1].value

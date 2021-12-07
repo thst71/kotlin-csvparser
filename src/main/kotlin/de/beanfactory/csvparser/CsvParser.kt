@@ -234,6 +234,13 @@ class CsvParser {
                 pos += 2
                 state = ESCAPED_CHARACTER
             }
+        } else if(inputData[pos] == '"'
+            && inputData.length > 1
+            && inputData[pos+1] == '"') {
+                // this is a double quote, reduce to one quote with escape
+                value = '"'
+                pos+=2
+                state = ESCAPED_CHARACTER
         } else {
             value = inputData[pos]
             pos += 1
