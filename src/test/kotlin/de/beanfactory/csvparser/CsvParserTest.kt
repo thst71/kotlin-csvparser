@@ -1,4 +1,4 @@
-package de.beanfactory.csvparser.de.beanfactory.csvparser
+package de.beanfactory.csvparser
 
 import de.beanfactory.csvparser.CsvParser
 import org.junit.jupiter.api.Assertions
