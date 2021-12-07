@@ -1,3 +1,3 @@
 
-rootProject.name = "process-keywords"
+rootProject.name = "kotlin-csvparser"
 
