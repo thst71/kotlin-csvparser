@@ -19,9 +19,39 @@ data class Row(var fields: List<Field> = ArrayList()) {
 /**
  * CsvParser implementation.
  *
- * (C) 2021 by Thomas Strau&szlig; All rights reserved.
+ * <p>
+ * Supported features:
+ * <ul><li>quoted multiline fields
+ * <li>escaping characters inside fields (using backslash)
+ * <li>escaped multiline fields (using backslash)
+ * <li>basic error handling
+ * </ul>
+ * </p>
  *
+ * <pre>
+ * MIT License
  *
+ * Copyright (c) 2021 Thomas Strauß
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * </pre>
  */
 class CsvParser {
 
@@ -31,13 +61,6 @@ class CsvParser {
     /**
      * parse the given string as csv.
      *
-     * <p>
-     * Supported features:
-     * <ul><li>quoted multiline fields
-     * <li>escaping characters inside fields (using backslash)
-     * <li>escaped multiline fields (using backslash)
-     * <li>basic error handling
-     * </ul>
      */
     fun parse(csvString: String): List<Row> {
         val rows = ArrayList<Row>()
